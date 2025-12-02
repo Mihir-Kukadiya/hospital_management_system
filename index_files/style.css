@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(to left, #3931af, #00c6ff);
+  color: #495057;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 3px 3px 3px #363535;
+}
+
+.logo img {
+  cursor: pointer;
+  height: 270px;
+  width: 270px;
+}
+
+/* ================================= index.php =============================== */
+
+.navbar {
+  background-color: hsl(211, 100%, 26%);
+  padding: 20px 0 !important;
+}
+
+.navbar-nav {
+  gap: 20px;
+}
+
+.navbar-nav .nav-item a {
+  color: #fff;
+  font-size: 17px;
+}
+
+.containerr {
+  margin: 0 40px;
+  flex: 1;
+}
+
+.index {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+}
+
+.left-panel h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.left-panel p {
+  font-size: 17px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.right-side {
+  position: relative;
+  width: 48%;
+}
+
+.auth-tabs {
+  position: absolute;
+  top: -270px;
+  left: 40px;
+  padding: 0 30px;
+  width: 700px;
+  height: 610px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.auth-tabss {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.nav-pills {
+  width: 500px;
+  margin-top: 10px;
+}
+
+.tab-content {
+  overflow-x: hidden;
+}
+
+/* ================================= about.php =============================== */
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px 30px 30px;
+}
+
+.image-section {
+  padding: 30px;
+}
+
+.image-section img {
+  width: 500px;
+  height: 600px;
+  border-radius: 12px;
+}
+
+.content-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px 0px 30px 30px;
+  color: #000;
+  background-color: #fff;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.content-section h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.content-section ul {
+  list-style-type: circle;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.content-section li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .image-section,
+  .content-section {
+    padding: 20px;
+  }
+
+  .content-section h1 {
+    font-size: 28px;
+  }
+
+  .content-section p {
+    font-size: 16px;
+  }
+}
+
+/* ================================= contact.php =============================== */
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-section h1{
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-section,
+.info-section {
+  flex: 1;
+  min-width: 320px;
+  padding: 0 30px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.info-section h1{
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.map-container {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .form-section,
+  .info-section {
+    padding: 20px;
+  }
+
+  .form-section h1,
+  .info-section h1 {
+    font-size: 26px;
+  }
+}
+
+/* ================================= admin-panel.php & doctor-panel.php & patient-panel.php =============================== */
+
+.sidebar {
+  background-color: #0062cc;
+  height: 100vh;
+  padding-top: 30px;
+  position: fixed;
+  width: 300px !important;
+  color: white;
+}
+
+.sidebar a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  padding: 12px 20px;
+  margin: 7px 0;
+}
+
+.sidebar a:not(.logo):hover,
+.sidebar a:not(.logo).active {
+  background-color: #0090c4 !important;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: transparent !important;
+}
+
+.dashboard-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: normal;
+}
+
+.content {
+  width: 900px;
+  margin-left: 250px;
+}
+
+.content h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #000;
+}
+
+.content p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #000;
+}
+
+#doctor-list,
+#patient-list,
+#doctor-history {
+  margin-left: 300px;
+  padding: 30px;
+  display: none;
+}
+
+#appointments h3,
+#patient-list h3,
+#doctor-list h3,
+#doctor-history h3 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table th,
+table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.modal-content {
+  margin-top: 150px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* -------------------------------- Add button ---------------------------------- */
+
+.fab-container {
+  margin: 1rem;
+}
+
+.fab-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.fab-button:hover {
+  background-color: #145ca4;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: ripple-effect 600ms linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-effect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
